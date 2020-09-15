@@ -4,8 +4,7 @@ from urllib.parse import urlparse
 import requests
 
 # make this a little smarter by being case-insensitive
-relevanceTerms=["deadly","covid","virus","viral","infect","nature","doctor","surgeon","body","surgery","hospital","nurse","medical","medicine","drug","health","DNA","RNA","diagnos","disease","biom","psycho","science","scientist"]
-
+relevanceTerms=["therap","deadly","covid","virus","infect","nature","doctor","surgeon","body","surgery","hospital","nurse","medical","medicine","drug","health","DNA","RNA","diagnos","disease","biom","psycho","scientist"]
 def scrape_item(story):
     item_url = 'https://hacker-news.firebaseio.com/v0/item/{item_id}.json?print=pretty'
     item_response = requests.get(item_url.format(item_id=story))
@@ -30,7 +29,6 @@ def scrape_item(story):
             if domain.startswith(sub_domains):
                 domain = domain.split('.', 1)[1]
         item['domain'] = domain
-    print(item)
     return item
 
 def check_for_relevance(story):

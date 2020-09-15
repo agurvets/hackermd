@@ -7,7 +7,7 @@
     <meta name="author" content="Alex Gurvets">
     <title>Hacker MD: Medical news from HN</title>
 
-    <meta name="title" content="HN Deck">
+    <meta name="title" content="Hacker MD: Medical news from HN">
     <meta name="description" content="HN Deck: An alternate way to browse Hacker News">
     <meta name="keywords" content="hackernews, ycombinator, hacker news, hackernews api"/>
 
@@ -34,7 +34,7 @@
             {% for key, items in stories.items() %}
             <div class="col">
                 <div class="header">
-                    <h1 class="col-header">{{ key}}</h1>
+                    <h1 class="col-header">Hacker MD</h1>
                 </div>
                 <div class="stories">
                     {% for item in items %}
@@ -42,11 +42,7 @@
                         <div class="item">
                             <p class="title">
                                 <a href="{{ item.url or item.hn_url }}" target="_blank">
-                                    {% if item.title|length > 70 %}
-                                    {{ item.title[:67] }}...
-                                    {% else %}
                                     {{ item.title}}
-                                    {% endif %}
                                 </a>
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
