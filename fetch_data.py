@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 import requests
 
 # make this a little smarter by being case-insensitive
-relevanceTerms=["doctor","surgeon","body","surgery","hospital","nurse","medical","medicine","drug","health","DNA","RNA","diagnos","disease","biom","psycho","science","scientist"]
+relevanceTerms=["deadly","covid","virus","viral","infect","nature","doctor","surgeon","body","surgery","hospital","nurse","medical","medicine","drug","health","DNA","RNA","diagnos","disease","biom","psycho","science","scientist"]
 
 def scrape_item(story):
     item_url = 'https://hacker-news.firebaseio.com/v0/item/{item_id}.json?print=pretty'

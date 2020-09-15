@@ -10,7 +10,7 @@
     <meta name="title" content="HN Deck">
     <meta name="description" content="HN Deck: An alternate way to browse Hacker News">
     <meta name="keywords" content="hackernews, ycombinator, hacker news, hackernews api"/>
-    
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -56,11 +56,15 @@
                                 </small>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted text-left">{{ item.descendants }} comments | <a
-                                        href="{{ item.hn_url }}" target="_blank">discuss</a>
-                                    {% if item.domain %}| <a
-                                            href="https://news.ycombinator.com/from?site={{ item.domain }}"
-                                            target="_blank">{{ item.domain }}</a>{% endif %}</small>
+                                <small class="text-muted text-left">
+                                    {% if item.descendants|int > 0 %}
+                                    <a href="{{ item.hn_url }}" target="_blank">{{ item.descendants }} comments</a>
+                                    {% else %}
+                                    <a href="{{ item.hn_url }}" target="_blank">discuss</a>
+                                    {% endif %}
+                                    {% if item.domain %}| 
+                                    <a href="https://news.ycombinator.com/from?site={{ item.domain }}"
+                                        target="_blank">{{ item.domain }}</a>{% endif %}</small>
                             </div>
                         </div>
                     </article>
