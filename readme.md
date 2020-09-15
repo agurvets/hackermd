@@ -2,7 +2,7 @@
 
 Top medicine-related stories from Hacker News.
 
-https://www.hackermd.net
+www.hackermd.net
 
 ## Prerequisites
 
