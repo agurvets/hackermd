@@ -1,8 +1,8 @@
 # Hacker MD
 
-Medicine-related stories from Hacker News.
+Top medicine-related stories from Hacker News.
 
-Live https://www.hackermd.net
+https://www.hackermd.net
 
 ## Prerequisites
 
