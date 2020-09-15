@@ -1,10 +1,10 @@
-# HN Deck
+# Hacker MD
 
-A tweetdeck like interface to browse Hacker News
+Medicine-related stories from Hacker News.
 
-Live https://hndeck.sagunshrestha.com/
+Live https://www.hackermd.net
 
-## Pre requisites
+## Prerequisites
 
 * Python 3.6+
 * pip
