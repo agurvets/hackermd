@@ -2,17 +2,15 @@ import csv
 from datetime import datetime
 
 import humanize
+import os
 from flask import Flask, render_template
 
-from env import HOST, PORT, DEBUG
-
 app = Flask(__name__)
-
 
 @app.route('/')
 def index():
     stories = {}
-    with open('data/top.csv') as file:
+    with open('/data/top.csv') as file:
         reader = csv.DictReader(file)
         items = []
         for item in list(reader):
@@ -28,4 +26,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host=HOST, port=PORT, debug=DEBUG)
+    app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT',8000)))

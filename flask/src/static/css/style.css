@@ -1,11 +1,15 @@
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+@media (max-width: 767px) {
+    .container-fluid {
+        min-width: 100%
     }
 }
-.container-fluid {
-    width:70%;
+
+@media (min-width: 768px) {
+    .container-fluid {
+        width:70%;
+    }
 }
+
 .col:first-child {
     padding-left: 5px;
 }
@@ -31,13 +35,11 @@
 }
 
 .stories {
-    height: 100vh;
     padding-top: 4px;
 }
 
 .item {
     width: 90%;
-    height: 90px;
     padding: 8px;
 }
 
@@ -45,7 +47,6 @@
     border-radius: 4px;
     display: block;
     width: 100%;
-    height: 70px;
     position: relative;
     background: #f0f0f0;
     border: 1px solid #f0f0f0;
@@ -59,8 +60,13 @@
     color: #000000;
 }
 
-.title > a:visited {
+a.title:visited {
     color: #828282;
+}
+
+a.title {
+    text-decoration: none;
+    color: #000000;
 }
 
 a {
@@ -68,7 +74,7 @@ a {
     color: #828282;
 }
 
-a:hover {
+.subtitle > a:hover {
     text-decoration: underline;
     color: #828282;
 }

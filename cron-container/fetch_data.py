@@ -1,10 +1,10 @@
 import csv
 from urllib.parse import urlparse
+from datetime import datetime
 
 import requests
 
-# make this a little smarter by being case-insensitive
-relevanceTerms=["therap","virus","covid","infect","nature","doctor","surgeon","body","surgery","hospital","nurse","medical","medicine","drug","health","DNA","RNA","diagnos","disease","biom","psycho","scientist"]
+relevanceTerms=["food","experiment","nobel","artist","therap","covid","infect","nature","doctor","surgeon","body","surgery","hospital","nurse","medical","medicine","drug","health","DNA","RNA","diagnos","disease","biom","psycho","scientist"]
 def scrape_item(story):
     item_url = 'https://hacker-news.firebaseio.com/v0/item/{item_id}.json?print=pretty'
     item_response = requests.get(item_url.format(item_id=story))
@@ -32,7 +32,7 @@ def scrape_item(story):
     return item
 
 def check_for_relevance(story):
-    title=story['title']
+    title=story['title'].lower()
     for term in relevanceTerms:
         if term in title:
             return True
@@ -55,7 +55,10 @@ if __name__ == '__main__':
         if check_for_relevance(item):
             items.append(item)
 
-    with open('data/top.csv', 'w') as file:
+    with open('/data/top.csv', 'w') as file:
         writer = csv.DictWriter(file, fieldnames=items[0].keys())
         writer.writeheader()
         writer.writerows(items)
+
+    print("Updated /data/top.csv at: ")
+    print(datetime.now())

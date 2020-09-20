@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Hacker MD: Medical news from HN">
+    <meta name="description" content="Hacker MD: Medical-ish news from HN">
     <meta name="author" content="Alex Gurvets">
-    <title>Hacker MD: Medical news from HN</title>
+    <title>Hacker MD: Medical-ish news from HN</title>
 
     <meta name="title" content="Hacker MD: Medical news from HN">
     <meta name="description" content="HN Deck: An alternate way to browse Hacker News">
@@ -44,12 +44,12 @@
                             {{ item.title}}
                             </a>
                             {% if item.domain %}
-                            <span>
+                            <span class="subtitle">
                                 <a class="domain-link" href="https://news.ycombinator.com/from?site={{ item.domain }}" target="_blank">({{ item.domain }})</a>
                             </span>
                             {% endif %}
                             <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted text-left">
+                                <small class="text-muted text-left subtitle">
                                     {{ item.score }} points by <a href="{{ item.user_url }}" target="_blank">{{ item.by
                                     }}</a> {{ item.time }}
                                     {% if item.descendants|int > 0 %}
