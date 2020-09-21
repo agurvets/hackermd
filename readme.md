@@ -9,13 +9,13 @@ www.hackermd.net
 * Python 3.6+
 * pip
 
-## Install Requirments
+## Install Requirements
 
     $ pip install -r requirements.txt
     
 ## Run App
 
-Collect data, alternatively schedule fetch_data.py as cron job
+Collect data or schedule fetch_data.py as a cron job
 
     $ python fetch_data.py
     
