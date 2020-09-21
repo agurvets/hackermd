@@ -5,3 +5,4 @@ venv/
 *.code-workspace
 *docker*
 *.yml
+*procedure.txt
