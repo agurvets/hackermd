@@ -4,7 +4,7 @@ from datetime import datetime
 
 import requests
 
-relevanceTerms=["food","experiment","nobel","artist","therap","covid","infect","nature","doctor","surgeon","body","surgery","hospital","nurse","medical","medicine","drug","health","DNA","RNA","diagnos","disease","biom","psycho","scientist"]
+relevanceTerms=["article","artist","biolog","biom"," body","covid","diagnos","disease","DNA","doctor","drug","food","experiment","health","hospital","human","infect","medical","medicine","nature","nobel","nurse","physicist","physics","psycho","RNA","scientific","scientist","species","surgeon","surgery","therap","treatment"]
 def scrape_item(story):
     item_url = 'https://hacker-news.firebaseio.com/v0/item/{item_id}.json?print=pretty'
     item_response = requests.get(item_url.format(item_id=story))
@@ -33,8 +33,9 @@ def scrape_item(story):
 
 def check_for_relevance(story):
     title=story['title'].lower()
+    score=story['score']
     for term in relevanceTerms:
-        if term in title:
+        if term in title and score > 10:
             return True
     return False
 
