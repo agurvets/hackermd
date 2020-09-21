@@ -1,6 +1,0 @@
-1. docker-compose up --build (or just docker-compose --build if no testing)
-2. change image names in hackermd-deployment.yml
-3. docker push gcr.io/hackermd/hackermd_webapp:1.x
-4. docker push gcr.io/hackermd/hackermd_cron:1.x
-5. kubectl apply -f ./hackermd-deployment.yml
-6. watch with kubectl get pods
