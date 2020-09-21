@@ -8,7 +8,6 @@
     <title>Hacker MD: Medical-ish news from HN</title>
 
     <meta name="title" content="Hacker MD: Medical news from HN">
-    <meta name="description" content="HN Deck: An alternate way to browse Hacker News">
     <meta name="keywords" content="hackernews, ycombinator, hacker news, hackernews api"/>
 
     <!-- Bootstrap core CSS -->
@@ -26,6 +25,17 @@
     <link rel="icon" href="{{ url_for('static', filename='img/favicon-32x32.png') }}" sizes="32x32" type="image/png">
     <link rel="icon" href="{{ url_for('static', filename='img/favicon-16x16.png') }}" sizes="16x16" type="image/png">
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178244916-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-178244916-1');
+    </script>
+
+
 </head>
 <body>
 <main role="main">
