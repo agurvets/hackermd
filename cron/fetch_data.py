@@ -4,7 +4,7 @@ from datetime import datetime
 
 import requests
 
-relevanceTerms=["article","artist","biolog","biom"," body","covid","diagnos","disease","DNA","doctor","drug","food","experiment","health","hospital","human","infect","medical","medicine","nature","nobel","nurse","physicist","physics","psycho","RNA","scientific","scientist","species","surgeon","surgery","therap","treatment"]
+relevanceTerms=["article","artist","biolog","biom"," body","chemis","chemic","clinic","covid","diagnos","disease","DNA","doctor","drug","food","experiment","health","hospital","human","infect","medical","medicine","museum","nature","nobel","nurse","paint","physicist","physics","protein","psycho","RNA","scientific","scientist","species","surgeon","surgery","therap","treatment"]
 def scrape_item(story):
     item_url = 'https://hacker-news.firebaseio.com/v0/item/{item_id}.json?print=pretty'
     item_response = requests.get(item_url.format(item_id=story))

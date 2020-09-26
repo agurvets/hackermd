@@ -4,22 +4,15 @@ Top medicine-related stories from Hacker News.
 
 www.hackermd.net
 
-## Prerequisites
+Heavily inspired by HN Deck: https://hndeck.sagunshrestha.com/
 
-* Python 3.6+
-* pip
+## Requirements
 
-## Install Requirements
+* Docker
 
-    $ pip install -r requirements.txt
+## To run the app:
+
+$ docker-compose up --build
     
-## Run App
-
-Collect data or schedule fetch_data.py as a cron job
-
-    $ python fetch_data.py
-    
-Run server
-
-    $ python app.py
+Wait ~10 mins for cron job to activate and fetch HN data, then view the app at http://0.0.0.0:8000/
     

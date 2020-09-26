@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  webapp:
+    build: ./flask
+    ports:
+    - "8000:8080"
+    volumes:
+    - myvol:/data
+  cron:
+    build: ./cron
+    volumes:
+    - myvol:/data
+volumes:
+  myvol:
